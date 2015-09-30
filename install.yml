@@ -5,15 +5,59 @@
   - role: osxc.packages
     brew_taps:
     - caskroom/fonts
+    - caskroom/versions
+    - homebrew/php
+    - blackfireio/homebrew-blackfire
     brew_packages:
     - git
-    - zsh
-    - vim
-    - the_silver_searcher
-    - ctags
-    - reattach-to-user-namespace
-    - tmux
+    - php56
+    - php56-apcu
+    - php56-symfony-debug
+    - php56-twig
+    - php56-xdebug
+    - php56-memcached
+    - php56-stats
+    - blackfire-php56
+    - composer
+    - nodejs
+    - httpie
+    - docker
+    - docker-compose
+    - ngrok
+    - hubflow
+    - heroku-toolbelt
     cask_packages:
-    - font-inconsolata-for-powerline
-    - iterm2
-    - macvim
+    - codebug
+    - sequel-pro
+    - sublime-text3
+    - font-inconsolata
+    - "0xed"
+    - transmit
+    - vmware-fusion
+    - vagrant
+    - vagrant-bar
+    - google-drive
+    - skype
+    - slack
+    - gitx
+
+- hosts: magnus
+  roles:
+  - role: osxc.packages
+    brew_packages:
+    - par2
+    - cksfv
+    - unrar
+    - postgresql
+    - s3cmd
+    cask_packages:
+    - vlc
+    - steam
+    - caffeine
+    - audio-hijack-pro
+    - dropbox
+    - menumeters
+    - mou
+    - omnigraffle
+    - origin
+    - x-moto
