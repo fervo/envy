@@ -7,7 +7,6 @@
     - caskroom/fonts
     - caskroom/versions
     - homebrew/php
-    - blackfireio/homebrew-blackfire
     brew_packages:
     - git
     - php56
@@ -17,7 +16,6 @@
     - php56-xdebug
     - php56-memcached
     - php56-stats
-    - blackfire-php56
     - composer
     - nodejs
     - httpie

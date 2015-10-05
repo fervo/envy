@@ -1,0 +1,7 @@
+- hosts: all
+
+  roles:
+    - role: geerlingguy.composer
+      composer_global_packages:
+        - name: symfony/symfony-installer
+      composer_add_to_path: false

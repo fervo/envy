@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - copy: src=dotfiles/bashrc dest=/Users/{{ ansible_user_id }}/.bashrc backup=yes
+  - copy: src=dotfiles/bash_profile dest=/Users/{{ ansible_user_id }}/.bash_profile backup=yes
+  - copy: src=dotfiles/bashrc.envy dest=/Users/{{ ansible_user_id }}/.bash.d/bashrc.envy backup=yes
+  - copy: src=dotfiles/gemrc dest=/Users/{{ ansible_user_id }}/.gemrc backup=yes
+  - copy: src=dotfiles/gitconfig dest=/Users/{{ ansible_user_id }}/.gitconfig backup=yes
+  - copy: src=dotfiles/gitignore.global dest=/Users/{{ ansible_user_id }}/.gitignore.global backup=yes

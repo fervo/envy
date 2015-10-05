@@ -1,9 +1,12 @@
 ---
 - hosts: all
+  remote_user: root
 
   tasks:
     - name: install chrome
-      mac_pkg: pkg_type=app
-               url=https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-               archive_type=dmg archive_path='Google Chrome.app'
-      sudo: yes
+      shell: |
+        curl -o /private/tmp/chrome.dmg https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+        hdiutil attach -mountpoint /private/tmp/chrome -nobrowse /private/tmp/chrome.dmg
+        cp -R "/private/tmp/chrome/Google Chrome.app" /Applications
+        hdiutil detach /private/tmp/chrome
+

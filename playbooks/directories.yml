@@ -1,0 +1,21 @@
+---
+- hosts: all
+
+  tasks:
+    - name: create Developer directory
+      file: path=/Users/{{ ansible_user_id }}/Developer state=directory mode=0755
+
+    - name: make Library visible
+      shell: setfile -a v /Users/{{ ansible_user_id }}/Library
+
+    - name: change permissions of /Library/Ruby
+      file: path=/Library/Ruby group=admin mode=775
+      become: true
+
+    - name: change permissions of /Library/Python
+      file: path=/Library/Python group=admin mode=775
+      become: true
+
+    - name: change permissions of /Library/Perl
+      file: path=/Library/Perl group=admin mode=775
+      become: true

@@ -1,0 +1,19 @@
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+  co = checkout
+  st = status
+  ci = commit
+  praise = blame
+[merge]
+  tool = opendiff
+[core]
+  pager = 
+  askpass = /usr/local/bin/git-password
+  excludesfile = ~/.gitignore.global
+[push]
+  default = simple
+[rerere]
+  enabled = 1

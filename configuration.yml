@@ -1,5 +1,0 @@
----
-# Configure your freshly installed software
-- hosts: all
-  roles:
-  - osxc.common-env

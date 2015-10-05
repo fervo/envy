@@ -1,0 +1,5 @@
+for file in ~/.bash.d/bashrc.* ; do
+    if [ -f "$file" ]; then
+        source "$file"
+    fi
+done

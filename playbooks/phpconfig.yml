@@ -1,0 +1,5 @@
+- hosts: all
+
+  tasks:
+    - name: copy Fervo php config
+      copy: src=../phpconfig/fervo.ini dest=/usr/local/etc/php/5.6/conf.d/fervo.ini
