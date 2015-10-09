@@ -5,3 +5,4 @@
 - include: playbooks/directories.yml
 - include: playbooks/composer.yml
 - include: playbooks/configuration.yml
+- include: playbooks/vision.yml

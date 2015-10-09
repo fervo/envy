@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+  - role: osxc.repository
+    clone_url: https://github.com/fervo/Vision.git
+    dest: /Users/{{ ansible_user_id }}/.Vision
+  post_tasks:
+  - copy: src=dotfiles/bashrc.vision dest=/Users/{{ ansible_user_id }}/.bash.d/ backup=yes
