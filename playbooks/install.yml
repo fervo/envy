@@ -38,6 +38,7 @@
     - skype
     - slack
     - gitx
+    - packer
 
 - hosts: magnus
   roles:
