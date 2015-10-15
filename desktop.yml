@@ -6,3 +6,4 @@
 - include: playbooks/composer.yml
 - include: playbooks/configuration.yml
 - include: playbooks/vision.yml
+- include: playbooks/vagrant.yml

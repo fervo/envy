@@ -1,0 +1,6 @@
+---
+- hosts: all
+
+  tasks:
+    - name: install vagrant-vmware-fusion plugin
+      shell: vagrant plugin install vagrant-vmware-fusion
