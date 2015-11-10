@@ -7,8 +7,25 @@ export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
 HISTFILESIZE=2500
 
-alias sf='php app/console'
-alias sfprod='php app/console --env=prod'
 alias bowr="./node_modules/.bin/bower"
 alias glp="./node_modules/.bin/gulp"
 alias groot='cd "$(git rev-parse --show-toplevel)"'
+
+alias sf='php app/console'
+alias sfprod='php app/console --env=prod'
+alias sfdev='php app/console --env=dev'
+
+spec ()
+{
+    php ./`composer config bin-dir`/phpspec $*
+}
+
+unit ()
+{
+    php ./`composer config bin-dir`/phpunit $*
+}
+
+sfunit ()
+{
+    php ./`composer config bin-dir`/phpunit -c app $*
+}
