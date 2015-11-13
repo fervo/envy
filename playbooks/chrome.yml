@@ -9,4 +9,5 @@
         hdiutil attach -mountpoint /private/tmp/chrome -nobrowse /private/tmp/chrome.dmg
         cp -R "/private/tmp/chrome/Google Chrome.app" /Applications
         hdiutil detach /private/tmp/chrome
-
+      args:
+        creates: "/Applications/Google Chrome.app"
