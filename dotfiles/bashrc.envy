@@ -15,6 +15,11 @@ alias sf='php app/console'
 alias sfprod='php app/console --env=prod'
 alias sfdev='php app/console --env=dev'
 
+hat ()
+{
+    php ./`composer config bin-dir`/behat $*
+}
+
 spec ()
 {
     php ./`composer config bin-dir`/phpspec $*

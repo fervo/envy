@@ -24,6 +24,7 @@
     - ngrok
     - hubflow
     - heroku-toolbelt
+    - mysql # for the client, which is useful
     cask_packages:
     - codebug
     - sequel-pro
